@@ -1,0 +1,81 @@
+﻿@page "/user"
+@using Data.Model
+@inject NavigationManager NavigationManager;
+<PageTitle>Counter</PageTitle>
+
+<h1>Users</h1>
+
+<div class=" row mb-4">
+    <div class="col-6">
+        <button type="button" class="btn btn-primary" @onclick="user">Add User</button>
+    </div>
+</div>
+@if (users is null)
+{
+    <p><em>Loading...</em></p>
+}
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>
+                User Number
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Contact Number
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in users)
+        {
+            <tr>
+                <td>
+                    @user.Id
+                </td>
+                <td>
+                    @user.Name
+                </td>
+                <td>
+                    @user.Age
+                </td>
+                <td>
+                    @user.ContactNumber
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private Data.Model.UserModel[]? users;
+    protected override void OnInitialized()
+    {
+        var userList = User.GetUserList();
+        users = userList.ToArray();
+    }
+
+    //// <summary>
+    /// add user 
+    /// </summary>
+    private void user()
+    {
+        NavigationManager.NavigateTo("/editUser");
+    }
+
+    /// <summary>
+    /// edit User
+    /// </summary>
+    /// <param name="id"></param>
+    private void editUser(int id)
+    {
+        NavigationManager.NavigateTo($"/editUser{id}");
+    }
+    
+}

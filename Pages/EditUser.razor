@@ -1,0 +1,46 @@
+﻿@page "/editUser"
+@using Data.Model
+@inject NavigationManager NavigationManager;
+<PageTitle>Edit User</PageTitle>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <EditForm Model="@user" OnSubmit="addUser">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <InputText id="name" class="form-control" @bind-Value="@user.Name"></InputText>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <InputNumber id="age" class="form-control" @bind-Value="@user.Age"></InputNumber>
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <InputText id="contactNumber" class="form-control" @bind-Value="@user.ContactNumber"></InputText>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" @onclick="cancel">Cancel</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+
+</div>
+@code {
+    private UserModel user = new UserModel();
+    // protected override void OnParametersSet(int id)
+    // {
+    //     UserModel existUser = User.GetUser(id);
+    // }
+    private void addUser()
+    {
+        User.AddUser(user);
+        NavigationManager.NavigateTo("/user");
+    }
+    private void cancel()
+    {
+       NavigationManager.NavigateTo("/user");
+    }
+    
+}
