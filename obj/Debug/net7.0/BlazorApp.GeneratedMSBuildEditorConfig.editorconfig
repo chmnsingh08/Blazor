@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Workspace/Blazor/Blazor/Pages/RadialGuage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmFkaWFsR3VhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Workspace/Blazor/Blazor/Pages/Task.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFzay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Workspace/Blazor/Blazor/Pages/User.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

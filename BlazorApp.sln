@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp.csproj", "{6C412FC9-0BC7-4705-8A13-D670A5EC502B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "..\Data\Data.csproj", "{D8F6C927-66F5-4178-8B8B-C02DEF6AFE0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "..\Data\Data.csproj", "{D8F6C927-66F5-4178-8B8B-C02DEF6AFE0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Libraries", "1. Libraries", "{CDCD797F-88DD-4003-A917-EAAC29F3552F}"
 EndProject

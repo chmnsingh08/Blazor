@@ -1,0 +1,49 @@
+﻿@page "/gauge"
+@inject IJSRuntime JSRuntime
+<h3>Gauge Component</h3>
+
+<canvas id="gaugeCanvas" width="200" height="200"></canvas>
+
+@code {
+    protected override async Task<int> OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initGauge",
+                "gaugeCanvas", // Canvas ID
+                200,  // Canvas Width
+                200,  // Canvas Height
+                0,    // Min Value
+                100,  // Max Value
+                50,   // Selected Value
+                "Value: ", // Text
+                "#00FF00", // Start Color
+                "#FF0000"  // End Color
+            );
+
+            // Set the DotNetReference for function invoke
+            await JSRuntime.InvokeVoidAsync("setDotnetReference", DotNetObjectReference.Create(this));
+        }
+
+        // Ensure all code paths return a Task
+        return 0;
+    }
+    int guageValue = 0;
+    // Method to handle gauge value change from JavaScript
+    [JSInvokable]
+    public async Task<int> OnGetGaugeValue(int gaugeValue)
+    {
+        // Do something with the updated gauge value
+        Console.WriteLine($"New gauge value: {gaugeValue}");
+        return gaugeValue;
+    }
+
+    // Method to get the gauge value from JavaScript
+    [JSInvokable]
+    public async Task<int> GetGaugeValue()
+    {
+        // You can perform additional logic here if needed
+        // For simplicity, we're returning the gauge value directly
+        return 50;
+    }
+}

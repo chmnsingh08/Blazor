@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LtjtgUfLjC4SdoYaJpeczswcg4ZjEMAT6llpUDRZ9VY=",
+  "Hash": "7joCcjm5VSOUIz6HQVlVLdcPc55334vJnsYnYfA7S08=",
   "Source": "BlazorApp",
   "BasePath": "_content/BlazorApp",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Workspace\\Blazor\\Blazor\\wwwroot\\js\\guaje.js",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Workspace\\Blazor\\Blazor\\wwwroot\\",
+      "BasePath": "_content/BlazorApp",
+      "RelativePath": "js/guaje.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\guaje.js"
     }
   ]
 }
